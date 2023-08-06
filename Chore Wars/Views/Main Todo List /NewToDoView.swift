@@ -29,7 +29,7 @@ struct NewToDoView: View {
                 TextField("Enter Subtitle", text: $newSubTitle)
                 DatePicker("Due Date:", selection: $selectedDate, displayedComponents: .date)
                 Picker ("Priority", selection: $priorityOption) {
-                    ForEach (0..<priorities.count) { index in
+                    ForEach (0..<priorities.count, id: \.self) { index in
                         Text(priorities[index]).tag(index)
                     }
                 }

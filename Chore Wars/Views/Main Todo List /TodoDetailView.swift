@@ -11,20 +11,19 @@ struct TodoDetailView: View {
     
     @Binding var todo: Todo
     @Binding var priorities: [String]
-    
+    @Binding var isCompleted: Bool
     
     var body: some View {
         
-        if !todo.isCompleted { //reminder: isCompleted is originally false 
+        if !todo.isCompleted { //reminder: isCompleted is originally false
             List {
                 TextField ("Title", text: $todo.title)
                 TextField ("Subtitle", text: $todo.subTitle)
-                Toggle ("Completed?", isOn: $todo.isCompleted)//do somethig which shows the value of todo.isCompleted at this point in the code
-                
+                Toggle ("Completed?", isOn: $todo.isCompleted)//why does the toggle not move???
                 DatePicker("Due Date:", selection: $todo.selectedDate, displayedComponents: .date)
                 Picker ("Priority", selection: $todo.priorityOption) {
-                    ForEach (0..<priorities.count) { index in //error here: Cannot convert value of type 'Binding<Subject>' to expected argument type 'Int', and Value of type 'Binding<NewToDoView>' has no dynamic member 'count' using key path from root type 'NewToDoView'
-                        Text(priorities[index]).tag(index)// error here: Referencing subscript 'subscript(_:)' on 'Binding' requires that 'NewToDoView' conform to 'MutableCollection'
+                    ForEach (0..<priorities.count, id: \.self) { index in
+                        Text(priorities[index]).tag(index)
                     }
                 }
             }
@@ -35,9 +34,14 @@ struct TodoDetailView: View {
 
 struct TodoDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TodoDetailView(
-            todo: .constant(Todo(title: "Some title", subTitle: "some subtitle")),
-            priorities: .constant(["High", "Medium", "Low"]) // Example priorities array
+        let todo = Todo(title: "Some title", subTitle: "some subtitle")
+        let priorities = ["High", "Medium", "Low"]
+        let isCompleted = false // or true depending on your case
+        
+        return TodoDetailView(
+            todo: .constant(todo),
+            priorities: .constant(priorities),
+            isCompleted: .constant(isCompleted)
         )
     }
 }

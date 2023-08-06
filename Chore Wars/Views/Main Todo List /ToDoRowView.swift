@@ -11,13 +11,14 @@ struct ToDoRowView: View {
     
     @Binding var todo: Todo
     @Binding var priorities: [String]
+    @Binding var isCompleted: Bool
     
     var body: some View {
         
         if !todo.isCompleted {
             
             NavigationLink {
-                TodoDetailView (todo: $todo, priorities: $priorities)//what do i put here
+                TodoDetailView (todo: $todo, priorities: $priorities, isCompleted: $isCompleted)//what do i put here
             } label: {
                 HStack {
                     Image (systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
@@ -46,6 +47,6 @@ struct ToDoRowView: View {
 
 struct ToDoRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoRowView(todo: .constant(Todo(title: "Sample Todo", subTitle: "Sample Subtitle", isCompleted: false)), priorities: .constant(["High", "Medium", "Low"]))
+        ToDoRowView(todo: .constant(Todo(title: "Sample Todo", subTitle: "Sample Subtitle", isCompleted: false)), priorities: .constant(["High", "Medium", "Low"]), isCompleted: .constant(true))
     }
 }
