@@ -7,18 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0729ED2A77912700FFF636 /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0729EC2A77912700FFF636 /* NewToDoView.swift */; };
+		1B0729F12A779DC900FFF636 /* ToDoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0729F02A779DC900FFF636 /* ToDoRowView.swift */; };
+		1B4425972A7E7A6400313214 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4425962A7E7A6400313214 /* TodoManager.swift */; };
+		1B4425992A7E7E8600313214 /* Todo+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4425982A7E7E8600313214 /* Todo+Sample.swift */; };
+		1B44259D2A7EAF8800313214 /* MainTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B44259C2A7EAF8800313214 /* MainTodoListView.swift */; };
+		1B44259F2A7EB2AC00313214 /* HowManyMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B44259E2A7EB2AC00313214 /* HowManyMoreView.swift */; };
 		1B57D2112A7249B00075F590 /* Chore_WarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57D2102A7249B00075F590 /* Chore_WarsApp.swift */; };
 		1B57D2132A7249B00075F590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57D2122A7249B00075F590 /* ContentView.swift */; };
 		1B57D2152A7249B20075F590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B57D2142A7249B20075F590 /* Assets.xcassets */; };
 		1B57D2182A7249B20075F590 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B57D2172A7249B20075F590 /* Preview Assets.xcassets */; };
+		1B57D2212A724FD80075F590 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57D2202A724FD70075F590 /* Todo.swift */; };
+		1B57D2232A7261B50075F590 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57D2222A7261B50075F590 /* TodoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B0729EC2A77912700FFF636 /* NewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
+		1B0729F02A779DC900FFF636 /* ToDoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoRowView.swift; sourceTree = "<group>"; };
+		1B4425962A7E7A6400313214 /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
+		1B4425982A7E7E8600313214 /* Todo+Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+Sample.swift"; sourceTree = "<group>"; };
+		1B44259C2A7EAF8800313214 /* MainTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTodoListView.swift; sourceTree = "<group>"; };
+		1B44259E2A7EB2AC00313214 /* HowManyMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowManyMoreView.swift; sourceTree = "<group>"; };
 		1B57D20D2A7249B00075F590 /* Chore Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chore Wars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B57D2102A7249B00075F590 /* Chore_WarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore_WarsApp.swift; sourceTree = "<group>"; };
 		1B57D2122A7249B00075F590 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B57D2142A7249B20075F590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B57D2172A7249B20075F590 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B57D2202A724FD70075F590 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		1B57D2222A7261B50075F590 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0729EE2A779CF200FFF636 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B57D2122A7249B00075F590 /* ContentView.swift */,
+				1B44259A2A7EAEEC00313214 /* Main Todo List  */,
+				1B44259B2A7EAEFF00313214 /* How Many More Tab */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B0729EF2A779D3D00FFF636 /* Model and ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B57D2202A724FD70075F590 /* Todo.swift */,
+				1B4425962A7E7A6400313214 /* TodoManager.swift */,
+				1B4425982A7E7E8600313214 /* Todo+Sample.swift */,
+			);
+			path = "Model and ViewModel";
+			sourceTree = "<group>";
+		};
+		1B44259A2A7EAEEC00313214 /* Main Todo List  */ = {
+			isa = PBXGroup;
+			children = (
+				1B0729F02A779DC900FFF636 /* ToDoRowView.swift */,
+				1B0729EC2A77912700FFF636 /* NewToDoView.swift */,
+				1B57D2222A7261B50075F590 /* TodoDetailView.swift */,
+				1B44259C2A7EAF8800313214 /* MainTodoListView.swift */,
+			);
+			path = "Main Todo List ";
+			sourceTree = "<group>";
+		};
+		1B44259B2A7EAEFF00313214 /* How Many More Tab */ = {
+			isa = PBXGroup;
+			children = (
+				1B44259E2A7EB2AC00313214 /* HowManyMoreView.swift */,
+			);
+			path = "How Many More Tab";
+			sourceTree = "<group>";
+		};
 		1B57D2042A7249B00075F590 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +106,10 @@
 		1B57D20F2A7249B00075F590 /* Chore Wars */ = {
 			isa = PBXGroup;
 			children = (
-				1B57D2102A7249B00075F590 /* Chore_WarsApp.swift */,
-				1B57D2122A7249B00075F590 /* ContentView.swift */,
+				1B0729EF2A779D3D00FFF636 /* Model and ViewModel */,
+				1B0729EE2A779CF200FFF636 /* Views */,
 				1B57D2142A7249B20075F590 /* Assets.xcassets */,
+				1B57D2102A7249B00075F590 /* Chore_WarsApp.swift */,
 				1B57D2162A7249B20075F590 /* Preview Content */,
 			);
 			path = "Chore Wars";
@@ -137,8 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0729ED2A77912700FFF636 /* NewToDoView.swift in Sources */,
+				1B44259F2A7EB2AC00313214 /* HowManyMoreView.swift in Sources */,
 				1B57D2132A7249B00075F590 /* ContentView.swift in Sources */,
+				1B57D2212A724FD80075F590 /* Todo.swift in Sources */,
 				1B57D2112A7249B00075F590 /* Chore_WarsApp.swift in Sources */,
+				1B44259D2A7EAF8800313214 /* MainTodoListView.swift in Sources */,
+				1B57D2232A7261B50075F590 /* TodoDetailView.swift in Sources */,
+				1B0729F12A779DC900FFF636 /* ToDoRowView.swift in Sources */,
+				1B4425972A7E7A6400313214 /* TodoManager.swift in Sources */,
+				1B4425992A7E7E8600313214 /* Todo+Sample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
