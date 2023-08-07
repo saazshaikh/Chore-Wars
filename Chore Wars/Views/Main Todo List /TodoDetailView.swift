@@ -10,8 +10,7 @@ import SwiftUI
 struct TodoDetailView: View {
     
     @Binding var todo: Todo
-    @Binding var priorities: [String]
-    @Binding var isCompleted: Bool
+    let priorities = ["High", "Medium", "Low"]
     
     var body: some View {
         
@@ -35,13 +34,9 @@ struct TodoDetailView: View {
 struct TodoDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let todo = Todo(title: "Some title", subTitle: "some subtitle")
-        let priorities = ["High", "Medium", "Low"]
-        let isCompleted = false // or true depending on your case
         
         return TodoDetailView(
-            todo: .constant(todo),
-            priorities: .constant(priorities),
-            isCompleted: .constant(isCompleted)
+            todo: .constant(todo)
         )
     }
 }

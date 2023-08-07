@@ -14,7 +14,6 @@ struct MainTodoListView: View {
     @State private var showConfirmAlert = false
     
     @State private var priorities: [String] = ["High", "Medium", "Low"]
-    @State private var isCompleted = true
     
     var body: some View {
         NavigationStack {
@@ -22,7 +21,7 @@ struct MainTodoListView: View {
             List ($todoManager.todos, editActions: [.all]) { $todo in
                 //to enable both the rearrage and delete option, we have used 'editActions: [.all]'
                 
-                ToDoRowView(todo: $todo, priorities: $priorities, isCompleted: $isCompleted)
+                ToDoRowView(todo: $todo, priorities: $priorities)
                 
             }
             .navigationTitle("Todos")
