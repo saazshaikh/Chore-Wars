@@ -13,7 +13,7 @@ extension Todo {
         
         Todo(title: "Unit 8", subTitle: "CRUD"),
         Todo(title: "Unit 7", subTitle: "idkk"),
-        Todo(title: "Unit 6", subTitle: "calculating score"),
+        Todo(title: "Unit 6", subTitle: "prac"),
         
     ]
     

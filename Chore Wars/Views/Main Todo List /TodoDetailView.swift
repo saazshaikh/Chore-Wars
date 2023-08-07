@@ -18,7 +18,6 @@ struct TodoDetailView: View {
             List {
                 TextField ("Title", text: $todo.title)
                 TextField ("Subtitle", text: $todo.subTitle)
-                Toggle ("Completed?", isOn: $todo.isCompleted)//why does the toggle not move???
                 DatePicker("Due Date:", selection: $todo.selectedDate, displayedComponents: .date)
                 Picker ("Priority", selection: $todo.priorityOption) {
                     ForEach (0..<priorities.count, id: \.self) { index in

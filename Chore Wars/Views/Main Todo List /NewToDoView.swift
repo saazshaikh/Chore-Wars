@@ -51,9 +51,7 @@ struct NewToDoView: View {
                 }
                 
                 Button ("Cancel", role: .destructive) {
-                    
                     dismiss ()
-                    
                 }
             }
             

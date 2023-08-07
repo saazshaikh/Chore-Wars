@@ -12,7 +12,10 @@ struct ToDoRowView: View {
     @Binding var todo: Todo
     @Binding var priorities: [String]
     
+    
+    
     var body: some View {
+        
         
         if !todo.isCompleted {
             
@@ -25,16 +28,42 @@ struct ToDoRowView: View {
                             todo.isCompleted.toggle()
                         }
                     
-                    VStack (alignment: .leading){
-                        Text(todo.title)
-                            .strikethrough(todo.isCompleted)
+                    HStack{
+                        VStack (alignment: .leading){
+                            Text(todo.title)
+                                .strikethrough(todo.isCompleted)
+                            
+                            if  !todo.subTitle.isEmpty {
+                                Text (todo.subTitle)
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                                    .strikethrough(todo.isCompleted)
+                            }
+                        }
                         
-                        if  !todo.subTitle.isEmpty {
-                            Text (todo.subTitle)
+                        let daysLeft = Calendar.current.dateComponents([.day], from: Date(), to: todo.selectedDate).day!
+                        
+                        VStack (alignment: .trailing){
+                            Text("Due Date in \(daysLeft) days ")
                                 .font(.footnote)
                                 .foregroundColor(.gray)
-                                .strikethrough(todo.isCompleted)
+                            
+                            if todo.priorityOption == 0 {
+                                Text ("Priority: High")
+                                    .font(.footnote)
+                                    .foregroundColor(.red)
+                            } else if todo.priorityOption == 1 {
+                                Text ("Priority: Medium")
+                                    .font(.footnote)
+                                    .foregroundColor(.yellow)
+                            } else {
+                                Text ("Priority: Low")
+                                    .font(.footnote)
+                                    .foregroundColor(.green)
+                            }
+                            
                         }
+                        .offset(x: 90)
                     }
                 }
             }
